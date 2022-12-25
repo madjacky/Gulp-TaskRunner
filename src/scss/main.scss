@@ -1,0 +1,17 @@
+// base imports
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+
+@import "./components/header";
+@import "./components/footer";
+
+// test
+.page__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--vh);
+}
