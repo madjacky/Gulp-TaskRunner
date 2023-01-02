@@ -1,0 +1,117 @@
+@mixin checkbox {
+  position: relative;
+  display: inline-block;
+  padding-left: 3px;
+  user-select: none;
+
+  &__input {
+    position: absolute;
+    appearance: none;
+  }
+
+  &__text {
+    position: relative;
+    display: inline-block;
+    padding-left: 29px;
+    user-select: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #424551;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: -1px;
+      display: inline-block;
+      border: 1px solid #B3B7BC;
+      border-radius: 3px;
+      width: 16px;
+      height: 16px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: -1px;
+      width: 16px;
+      height: 16px;
+      border-radius: 3px;
+      background-image: url('data:image/svg+xml,%3Csvg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M9.82771 0.695262C10.0574 0.955612 10.0574 1.37772 9.82771 1.63807L3.94536 8.30474C3.71564 8.56509 3.34319 8.56509 3.11347 8.30474L0.17229 4.9714C-0.05743 4.71105 -0.05743 4.28894 0.17229 4.0286C0.40201 3.76825 0.77446 3.76825 1.00418 4.0286L3.52941 6.89052L8.99582 0.695262C9.22554 0.434913 9.59799 0.434913 9.82771 0.695262Z" fill="white"/%3E%3C/svg%3E%0A');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 10px 8px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+
+  &__input:checked + &__text::before {
+    background-color: #17696A;
+    border: none;
+  }
+
+  &__input:checked + &__text::after {
+    opacity: 1;
+  }
+}
+
+@mixin radio {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+
+  &__input {
+    position: absolute;
+    appearance: none;
+  }
+
+  &__text {
+    position: relative;
+    display: inline-block;
+    padding-left: 27px;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 160%;
+    color: #424551;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -1px;
+      top: 5px;
+      display: inline-block;
+      border: 1px solid #B3B7BC;
+      border-radius: 100%;
+      width: 16px;
+      height: 16px;
+      transition: border-color 0.3s ease-in-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -1px;
+      top: 5px;
+      width: 16px;
+      height: 16px;
+      background-image: url('data:image/svg+xml,%3Csvg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle cx="4" cy="4" r="4" fill="%2317696A"/%3E%3C/svg%3E');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 8px 8px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+
+  &__input:checked+&__text::before {
+    border-color: #17696A;
+  }
+
+  &__input:checked+&__text::after {
+    opacity: 1;
+  }
+}
