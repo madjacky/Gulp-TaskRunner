@@ -215,7 +215,7 @@ const scriptsBackend = () => {
 //assets
 const assets = () => {
   return src(`${paths.srcAssetsFolder}/**`)
-    .pipe(dest(path.buildAssetsFolder))
+    .pipe(dest(paths.buildAssetsFolder))
 }
 
 //images
