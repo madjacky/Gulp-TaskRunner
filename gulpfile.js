@@ -48,7 +48,8 @@ const paths = {
   srcMainJs: `${srcFolder}/js/main.js`,
   buildJsFolder: `${buildFolder}/js`,
   srcHtmlPartialsFolder: `${srcFolder}/partials`,
-  assetsFolder: `${srcFolder}/assets`
+  srcAssetsFolder: `${srcFolder}/assets`,
+  buildAssetsFolder: `${buildFolder}/assets`
 };
 
 let isProd = false; // dev by default
@@ -213,8 +214,8 @@ const scriptsBackend = () => {
 
 //assets
 const assets = () => {
-  return src(`${paths.assetsFolder}/**`)
-    .pipe(dest(buildFolder))
+  return src(`${paths.srcAssetsFolder}/**`)
+    .pipe(dest(path.buildAssetsFolder))
 }
 
 //images
@@ -269,7 +270,7 @@ const watchFiles = () => {
   watch(paths.srcFullJs, scripts);
   watch(`${paths.srcHtmlPartialsFolder}/*.html`, htmlInclude);
   watch(`${srcFolder}/*.html`, htmlInclude);
-  watch(`${paths.assetsFolder}/**`, assets);
+  watch(`${paths.srcAssetsFolder}/**`, assets);
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`, images);
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, avifImages);
