@@ -48,7 +48,7 @@
     "scope": "html",
     "prefix": "g-social",
     "body": [
-      "<ul class=\"social\" title=\"$1\">",
+      "<ul class=\"list-reset social\" title=\"$1\">",
       "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--facebook\" aria-label=\"Our Facebook Page\"></a></li>",
       "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--instagram\" aria-label=\"Our Instagram Profile\"></a></li>",
       "  <li class=\"social__item\"><a href=\"#\" target=\"_blank\" class=\"social__link social__link--twitter\" aria-label=\"Our Twitter Account\"></a></li>",
