@@ -1,13 +1,58 @@
 :root {
-  // base
+  /* ------------------------------ */
+  /* -------  Base Variables ------ */
+  /* ------------------------------ */
   --font-family: "Lato", sans-serif;
-  --content-width: 1230px;
-  --content-fluid-width: 1860px;
-  --container-offset: 15px;
+  --content-width: 76.875rem;
+  --content-fluid-width: 116.25rem;
+  --container-offset: .9375rem;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
 
-  // colors
-  --color-white: #ffffff;
-  --color-black: #000000;
+  /* ------------------------------- */
+  /* -------- Gaps Variables ------- */
+  /* -----------------------------  */
+  --gap: 1.875rem;
+
+  /* ------------------------------ */
+  /* ------  Color Variables ------ */
+  /* ------------------------------ */
+  --color-dark: 230 35% 7%;
+  --color-light: 231 77% 90%;
+  --color-white: 0 0% 100%;
+
+  /* ------------------------------ */
+  /* ---  Font Size Variables ----- */
+  /* ------------------------------ */
+  --font-size-200: 0.875rem;
+  --font-size-300: 1rem;
+  --font-size-400: 0.9375rem;
+  --font-size-500: 1rem;
+  --font-size-600: 1rem;
+  --font-size-700: 1.5rem;
+  --font-size-800: 3.5rem;
+  --font-size-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+}
+
+/* ------------------------------ */
+/* ---  Responsive Font Sizes --- */
+/* ------------------------------ */
+@media (min-width: 35em) {
+  :root {
+    --font-size-400: 1rem;
+    --font-size-500: 1.25rem;
+    --font-size-600: 1.5rem;
+    --font-size-700: 2.5rem;
+    --font-size-800: 5rem;
+  }
+}
+
+@media (min-width: 45em) {
+  :root {
+    --font-size-400: 1.125rem;
+    --font-size-500: 1.75rem;
+    --font-size-600: 2rem;
+    --font-size-700: 3.5rem;
+    --font-size-800: 6.25rem;
+  }
 }
